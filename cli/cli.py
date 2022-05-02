@@ -23,7 +23,9 @@ def batting(target, chasing, *, input_function=cli_input, args=()):
         if chasing:
             print('Target:' + str(target))
         print('score=' + str(score))
-        a = input_function(*args)
+        for val in input_function(*args):
+            if val is not None:
+                a = val
         b = random.randrange(0, 11, 1) % 11
         if valid(a):
             print('You hit:' + str(a))
