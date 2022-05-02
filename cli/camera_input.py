@@ -1,7 +1,10 @@
 import cv2
 import mediapipe as mp
 
-from hand_state import HandState
+import sys
+sys.path.append('..')
+
+from core.hand_state import HandState
 
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -30,5 +33,5 @@ def camera_input(cap) -> int:
             elif hand.has_recognized_number:
                 return hand.recognized_number().int()
 
-            if cv2.waitKey(5) & 0xFF == 27:
-                break
+            # if cv2.waitKey(5) & 0xFF == 27:
+            #     break
