@@ -1,6 +1,6 @@
 import cv2
 import mediapipe as mp
-from hand import HandState
+from handgames.hand import HandState
 
 
 def detect_number(video_capture) -> int:

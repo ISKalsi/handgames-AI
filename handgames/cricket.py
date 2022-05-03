@@ -1,6 +1,6 @@
 from random import randint
 from cv2 import VideoCapture
-from detection import detect_number
+from handgames.detection import detect_number
 
 
 class Player:
